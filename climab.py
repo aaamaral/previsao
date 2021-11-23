@@ -34,6 +34,19 @@ app.layout = html.Div([
 
     html.Div(className='mb-4'),
 
+
+    html.Div(
+    dbc.Row(dbc.Col(
+    dcc.Dropdown(
+        id='cities-dropdown',clearable=False, style={
+                    'color': '#565555',
+                    'borderStyle':'solid',
+                    # 'width': '50%',
+                    'font-size': '15px',
+                    'textAlign': 'center'}  ),
+    width=6,md={'size':4,'offset':4},xs={'size':8,'offset':2}),className='mb-4',),),
+
+
     html.Div(
     dbc.Row(dbc.Col(
     dcc.Dropdown(
@@ -51,22 +64,13 @@ app.layout = html.Div([
 
 
 
-    html.Div(
-    dbc.Row(dbc.Col(
-    dcc.Dropdown(
-        id='cities-dropdown',clearable=False, style={
-                    'color': '#565555',
-                    'borderStyle':'solid',
-                    # 'width': '50%',
-                    'font-size': '15px',
-                    'textAlign': 'center'}  ),
-    width=6,md={'size':4,'offset':4},xs={'size':8,'offset':2}),className='mb-4',),),
+    
 
 
 
     dbc.Row(dbc.Col(html.Div(id='display-selected-values', className="text-center",style={
                     'color': '#565555',
-                    'font-size': '30px',
+                    'font-size': '50px',
                     'font': 'sans-serif',
                     'font-weight': 'bolder',
                     } ),),),
