@@ -23,7 +23,7 @@ app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LUX,FONT_AWESOME],meta
 
 server=app.server
 
-temperatura =    ['Temp. atual (°C)','Temp. máx (°C)', 'Temp. mín (°C)','Chuva(%)','Umidade(%)','Vento(m/s)']
+temperatura =    ['Temp. inst. (°C)','Temp. máx (°C)', 'Temp. mín (°C)','Chuva(%)','Umidade(%)','Vento(m/s)']
 
 horas=['3h', '6h', '9h','12h','24h','48h']
 
@@ -71,7 +71,7 @@ app.layout = html.Div([
     dbc.Row(dbc.Col(html.Div(id='display-selected-values', className="text-center",style={
                     'color': '#565555',
                     'font-size': '50px',
-                    'font': 'Hiruko',
+                    'font': 'sans-serif',
                     'font-weight': 'bolder',
                     } ),),),
 
@@ -224,17 +224,17 @@ def set_display_children(selected_country, selected_city,df_del_json):
 
     df = pd.DataFrame(data_dentro, columns = columns)
 
-    if selected_country == '3h' and selected_city=='Temp. atual (°C)' :
+    if selected_country == '3h' and selected_city=='Temp. inst. (°C)' :
         final=str(df['temp'].iloc[2])+'°C'
-    elif selected_country=='6h' and selected_city=='Temp. atual (°C)':
+    elif selected_country=='6h' and selected_city=='Temp. inst. (°C)':
         final=str(df['temp'].iloc[5])+'°C'
-    elif selected_country=='9h' and selected_city=='Temp. atual (°C)':
+    elif selected_country=='9h' and selected_city=='Temp. inst. (°C)':
         final=str(df['temp'].iloc[8])+'°C'
-    elif selected_country=='12h' and selected_city=='Temp. atual (°C)':
+    elif selected_country=='12h' and selected_city=='Temp. inst. (°C)':
         final=str(df['temp'].iloc[11])+'°C'
-    elif selected_country=='24h' and selected_city=='Temp. atual (°C)':
+    elif selected_country=='24h' and selected_city=='Temp. inst. (°C)':
         final=str(df['temp_d'].iloc[0])+'°C'
-    elif selected_country=='48h' and selected_city=='Temp. atual (°C)':
+    elif selected_country=='48h' and selected_city=='Temp. inst. (°C)':
         final=str(df['temp'].iloc[1])+'°C'
     elif selected_country=='3h' and selected_city=='Chuva(%)':
         final=str(df['rain'].iloc[2])+'%'
