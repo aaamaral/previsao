@@ -75,6 +75,14 @@ app.layout = html.Div([
                     'font-weight': 'bolder',
                     } ),),),
 
+    dbc.Row(dbc.Col(html.Div([       
+    html.P('A previsão do tempo é exibida de acordo com a sua localização aual.',className="text-center",style={    
+                    'color': '#565555',  
+                    'font-size': '10px',
+                    'font': 'sans-serif',
+                    'font-weight': 'bolder',
+                    })]),width=12,md={'size':4,'offset':4,'font-size':'30px'},xs={'size':4,'offset':3,'font-size':'15px'},),),
+
     dcc.Store(id='display-selected-values2'),
 
     dcc.Store(id='storage2'),
