@@ -71,7 +71,7 @@ app.layout = html.Div([
     dbc.Row(dbc.Col(html.Div(id='display-selected-values', className="text-center",style={
                     'color': '#565555',
                     'font-size': '50px',
-                    'font': 'sans-serif',
+                    'font': 'Hiruko',
                     'font-weight': 'bolder',
                     } ),),),
 
