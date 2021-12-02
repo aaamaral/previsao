@@ -39,7 +39,7 @@ app.layout = html.Div([
     dbc.Row(dbc.Col(
     dcc.Dropdown(
         id='cities-dropdown',clearable=False, style={
-                    'color': '#11952A',
+                    'color': '#565555',
                     'borderStyle':'solid',
                     # 'width': '50%',
                     'font-size': '15px',
